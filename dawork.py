@@ -1,5 +1,5 @@
 import json 
-x = open("./saturn.json", encoding="utf8")
+x = open("./flashcard.json", encoding="utf8")
 data = json.load(x)
 
 class Teacher:
@@ -9,6 +9,5 @@ class Teacher:
 flashcard_list =[]
 flashcard_data = [flashcard.to_dict() for flashcard in flashcards_list]
 with open("flashcards.json", "w") as file:
-    json.dump(cars_data, file, indent=4)
+    json.dump(flashcard_data, file, indent=4)
 
-"""     class Student: """
