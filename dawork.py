@@ -6,11 +6,13 @@ class Teacher:
         finished = False 
         while finished == False:
             if input ("type YES if you would like to make a card") == 'YES':
-                cards(input('Type the question:')) == input('Type in your answer')
+                question = input("What da question?")
+                answer = input("Gimme an answer")
+                cards[question] = answer
             else: 
-                finished == True
                 with open("flashcard.json", "w") as file:
                     json.dump(cards,file, indent =4)
+                    break
 
 
 class Student:
