@@ -10,9 +10,9 @@ class Teacher:
                 answer = input("Gimme an answer")
                 cards[question] = answer
             else: 
+                finished == True
                 with open("flashcard.json", "w") as file:
                     json.dump(cards,file, indent =4)
-                    break
 
 
 class Student:
