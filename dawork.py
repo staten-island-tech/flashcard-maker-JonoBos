@@ -16,7 +16,6 @@ class Teacher:
 
 
 class Student:
-#From Json file you want the student to find the value 
     def card_answer():
         value_student=input("What is the answer?")
         point ==0
@@ -49,3 +48,6 @@ while True:
             print ("No no no")
 if streak>=5:
     point+=10
+
+if __name__ == "__main__":
+    main()
