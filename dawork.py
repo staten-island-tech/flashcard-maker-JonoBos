@@ -18,24 +18,23 @@ class Teacher:
 
 
 class Student:
-   for question, correct_answer in student_card.items():
-            print(f"\n{question}")
-            def card_answer():
-                value_student=input("What is the answer?")
-                point =0
-                streak=0
-                with open ("FlashCards.json", "r") as file:
-                    student_card =json.load(file)
-                    for card in student_card:
-                        if value_student == student_card [card]: 
-                            point +=1 
-                            streak+=1
-                            if streak>=5:
-                                point+=10
-                        if value_student != student_card [card]:
-                            streak = 0
-                            print (f' Sorry the correct answer was ' ,{student_card[card]} ,'Your streak has been reset.')
-                        print (f'You have finished. Your score was {point}')
+
+    def card_answer():
+        value_student=input("What is the answer?")
+        point =0
+        streak=0
+        with open ("FlashCards.json", "r") as file:
+            student_card =json.load(file)
+            for card in student_card:
+                if value_student == student_card [card]: 
+                    point +=1 
+                    streak+=1
+                    if streak>=5:
+                        point+=10
+                if value_student != student_card [card]:
+                    streak = 0
+                    print (f' Sorry the correct answer was ' ,{student_card[card]} ,'Your streak has been reset.')
+                print (f'You have finished. Your score was {point}')
 def main ():
     role_decided = False 
 
